@@ -1,13 +1,19 @@
 
 # g4padre
+A Geant4 Monte Carlo Simulation Package for PADRE (The Solar Polarization and Directivity X-Ray Experiment), a groundbreaking NASA CubeSat mission.
 
-**g4padre** is a simplified Geant4-based simulation extracted from the `g4main` framework. It models a basic detector setup consisting of:
+PADRE website: https://padre.ssl.berkeley.edu/
+
+It models a basic detector setup consisting of:
 
 * A single **CdTe detector**
 * **X-ray windows**
 * An **aluminum window**
 
 This setup is intended for x-ray detection studies or as a clean starting point for detector development and testing in simulation.
+
+This simulation package is based on the Monte Carlo Simulation package for STIX (Solar X-ray Imager/telescope onboard Solar Orbiter), 
+     which was developed by Hualin.
 
 ## Project Structure
 
