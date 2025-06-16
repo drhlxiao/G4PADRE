@@ -19,4 +19,4 @@
 /gps/ene/intercept 1
 /gps/ene/gradient 0
 
-/run/beamOn 1000000
+/run/beamOn 100000000

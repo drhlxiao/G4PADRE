@@ -23,8 +23,8 @@ for e0, edeps in zip(E0_list, edep_list):
             edep_filtered.append(edep_val)
 
 # Define histogram parameters
-xbins, xmin, xmax = 300, 0, 150
-ybins, ymin, ymax = 300, 0, 150
+xbins, xmin, xmax = 1500, 0, 150
+ybins, ymin, ymax = 1500, 0, 150
 
 # Create 2D histogram
 H, xedges, yedges = np.histogram2d(
@@ -51,21 +51,22 @@ plt.imshow(
     cmap=cmap_with_white,
     interpolation='nearest'
 )
+
 plt.colorbar(label="Counts")
-plt.xlabel("E0")
-plt.ylabel("edep")
-plt.title("2D Histogram: edep vs E0 (white = zero)")
+plt.xlabel("Photon energy (keV)")
+plt.ylabel("Energy deposition (keV)")
+plt.title("2D Histogram: Energy deposition (bin center) vs Photon energy (white = zero)")
 plt.tight_layout()
-plt.savefig("histogram_plot_white_zero.png", dpi=300)
-plt.show()
+plt.savefig("response_matrix.png", dpi=300)
+#plt.show()
 
 # Save histogram as CSV
 xcenters = 0.5 * (xedges[1:] + xedges[:-1])
 ycenters = 0.5 * (yedges[1:] + yedges[:-1])
 df = pd.DataFrame(H.T, index=np.round(ycenters, 2), columns=np.round(xcenters, 2))
-df.index.name = "edep"
-df.columns.name = "E0"
-df.to_csv("response.csv")
+df.index.name = "Energy_Bin_Center "
+df.columns.name = "Photon_Energy_Bin_Center"
+df.to_excel("response.xlsx")
 
 print("Plot saved as 'response.png' and CSV written to 'response.csv'")
 
