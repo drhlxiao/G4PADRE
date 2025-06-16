@@ -36,5 +36,5 @@ The Beryllium components use the same material properties as those used in the S
 * The energy bins in the Excel file represent bin centers
 * Values in the response matrix are the number of total recorded counts above the threshold 4 keV
 * Only deposited energy values were used in constructing the response matrix
-* Detector effects, such as near-surface phenomena and energy resolution smearing, were not included
+* Detector effects, such as near-surface effect and energy resolution smearing, were not included
 
