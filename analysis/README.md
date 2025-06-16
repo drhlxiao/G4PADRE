@@ -4,13 +4,12 @@
 
 The geometry includes:
 
-* 0.4 mm Aluminum
+* 0.4 mm Aluminum alloy
 * 1 mm Beryllium plate
 * Caliste-SO detector
 * Insulators were not modeled.
 
 The Beryllium components use the same material properties as those used in the STIX instrument.
-Aluminum is modeled as pure aluminum.
 
 ---
 
