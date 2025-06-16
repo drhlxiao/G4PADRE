@@ -30,8 +30,8 @@ The Beryllium components use the same material properties as those used in the S
 
 ##  Response Matrix obtained from the simulation run
 
-* Detector threshold set to 4 keV
-* Incident photon energy range: 0 to 150 keV, divided into 1500 bins
+* Threshold for counting set to 4 keV
+* Incident photon energy range: 0 to 150 keV, divided into 1500 bins in the response matrix
 * Energy deposition range: 0 to 150 keV, divided into 1500 bins
 * The energy bins in the Excel file represent bin centers
 * Values in the response matrix are the number of total recorded counts above the threshold 4 keV
