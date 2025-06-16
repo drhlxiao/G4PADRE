@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{siunitx}
+
+\title{Simulation Results Summary}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Mass Model}
+
+The geometry includes:
+\begin{itemize}
+  \item 0.4 mm Aluminum
+  \item 1 mm Beryllium plate  
+  \item Caliste-SO detector
+  \item Insulators  were not modeled.
+\end{itemize}
+
+The Beryllium components use the same material properties as those implemented in the STIX instrument.  
+Aluminum is modeled as pure aluminum.
+
+
+
+
+\section{Incident Photon Parameters}
+
+\begin{enumerate}
+  \item \textbf{Total Photons Simulated:} \( 1 \times 10^8 \) photons
+  \item \textbf{Photon Beam Area:} \( 12 \times 12~\text{mm}^2 = 1.44~\text{cm}^2 \)
+    \begin{itemize}
+      \item \textbf{Photon Flux:} 
+      \[
+        \frac{1 \times 10^8}{1.44}69444444 ~\text{photons/cm}^2
+      \]
+    \end{itemize}
+  \item \textbf{Photon Energy Range:} 0–150~keV
+\end{enumerate}
+
+\noindent \textbf{Differential Flux:} 
+\[
+  462962~\text{photons}/(\text{keV} \cdot \text{cm}^2)
+\]
+
+\section{Response Matrix}
+
+\begin{itemize}
+  \item Incident photon energy range: 0–150~keV, divided into 1500 bins
+  \item Energy deposition range: 0–150~keV, divided into 1500 bins.
+  \item The energy bins in the excel file are the centers of bins.
+  \item Only deposited energy values were used in constructing the response matrix.
+  \item Detector effects, such as near-surface phenomena and energy resolution smearing, were not included.
+\end{itemize}
+
+
+\end{document}
