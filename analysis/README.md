@@ -19,11 +19,11 @@ Aluminum is modeled as pure aluminum.
 1. **Total Photons Simulated:** 100,000,000 photons
 2. **Photon Beam Area:** 12 × 12 mm² = 1.44 cm²
 
-   * **Photon Flux:**
+   * **Photon Fluence:**
      100,000,000 / 1.44 ≈ 69,444,444 photons/cm²
 3. **Photon Energy Range:** 0 to 150 keV
 
-**Differential Flux:**
+**Differential fluence:**
 462,962 photons / (keV·cm²)
 
 ---
