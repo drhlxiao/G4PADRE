@@ -598,7 +598,15 @@ G4VPhysicalVolume *DetectorConstruction::Construct() {
 	// Use the following mixture
 	//+ density of the mixture 1.77
 	
-
+G4Material* aluminium6061Mat = new G4Material("aluminium6061", 2.70 * g/cm3, 8);
+    aluminium6061Mat->AddElement(elAl, 0.9738); // Adjusted to 97.38%
+    aluminium6061Mat->AddElement(elMg, 0.0100); // 1.00%
+    aluminium6061Mat->AddElement(elSi, 0.0060); // 0.60%
+    aluminium6061Mat->AddElement(elFe, 0.0035); // 0.35%
+    aluminium6061Mat->AddElement(elCu, 0.00275); // 0.275%
+    aluminium6061Mat->AddElement(elCr, 0.00195); //
+    aluminium6061Mat->AddElement(elZn, 0.00125); //
+    aluminium6061Mat->AddElement(elTi, 0.00075); //
 	//geometry: 
 
 	// 4.1 mm  4.2 mm Al ===> 22 mm X-ray window
@@ -636,7 +644,7 @@ G4VPhysicalVolume *DetectorConstruction::Construct() {
 	//construct Aluminium  Window
 
 	G4Box *alumWindow= new G4Box("alumWindow", 10 * mm, 10 * mm, 0.2 * mm); //X-ray window dimensions:  20 x 20 x 1 mm^3
-	alumWindowLog =new G4LogicalVolume(alumWindow, Alum, "alumWindowLog", 0, 0, 0);
+	alumWindowLog =new G4LogicalVolume(alumWindow, aluminium6061Mat, "alumWindowLog", 0, 0, 0);
 
 
 
